@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+span{color: #ff0095;
+    }
+
+h1{
+    color: white;
+    font-size: 100px;
+   
+}
+
+body{
+    padding-top: 70px;
+    background-color:black;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+section {
+    scroll-margin-top: 120px;
+}
+
+nav {
+    background-color: black;
+    width: 100%;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    color:#ff0095;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color:#ff0095;
+}
+
+.entete {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    gap: 100px;
+}
+
+.entete h1 {
+    font-size: 100px;
+}
+
+.entete img {
+    width: 40%;
+    max-width: 400px;
+    min-width: 70px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 30px;
+}
+
+h3{
+    color: #ff0095;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+p{
+    color: white;
+}
+#description{
+    text-align: left;
+    font-size: 14px;
+    margin-top: -300px;
+    margin-left: 265px;
+}
+#bouton{
+    background-color: #ff0095;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    padding: 15px 35px;
+    border: none;
+    border-radius: 15px;
+
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 30px;
+    margin-left: 265px;
+}
+#bouton:hover {
+    background-color: #ff0095;
+    transform: scale(1.02);
+    box-shadow: 0 0 20px 5px #ff0095;
+}
+#version{
+    font-size: 12px;
+    color: rgb(120, 120, 120);
+    margin-left:270px ;
+    margin-top: 5px;
+}
+#hr{
+    margin-top: 150px;
+}
+#propos{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.conteneur{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+.bloc {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    width: 400px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+.numero{
+    font-size: 70px;
+    color: #ff0095;
+    margin-right: 40px;
+    margin-left: -70px;
+}
+#record{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+#mon{
+    text-align: center;
+    margin-top: 0;
+}
+h4{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #ff0095;
+    margin-bottom: 50px;
+}
+#footer{
+    text-align: right;
+    margin: 10px;
+    font-size: 12px;
+    color: rgb(120, 120, 120);
+}
+#dev{
+    text-align: left;
+    font-size: 12px;
+    margin: 10px;
+    margin-bottom: -25px;
+    color: rgb(120, 120, 120);
+}
+.galerie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.galerie img{
+    width: 450px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+
+/* Adaptation responsive : styles d'origine conservés */
+body { overflow-x: hidden; }
+nav ul { flex-wrap: wrap; }
+.entete { align-items: left; }
+#description, #bouton, #version { max-width: calc(100% - 32px); }
+.galerie img { max-width: 100%; }
+.bloc { max-width: 100%; }
+
+@media (max-width: 900px) {
+    nav { padding: 14px 20px; gap: 18px; }
+    nav ul { gap: 18px; }
+    nav a { font-size: 16px; }
+    .entete { gap: clamp(20px, 5vw, 60px); }
+    .entete h1 { font-size: clamp(48px, 9vw, 80px); }
+    .entete img { width: min(38%, 300px); }
+    #description, #bouton { margin-left: clamp(20px, 18vw, 180px); }
+    #description { margin-top: -190px; }
+    #version { margin-left: clamp(20px, 18vw, 185px); }
+    #hr { margin-top: 110px; }
+    .conteneur { gap: 30px; padding: 0 20px; }
+    .bloc { width: min(400px, 100%); }
+    .galerie { padding: 0 20px; gap: 20px; }
+    .galerie img { width: min(450px, 100%); height: auto; aspect-ratio: 16 / 9; }
+}
+
+@media (max-width: 600px) {
+    body { padding-top: 110px; }
+    nav { flex-direction: column; padding: 10px 12px; gap: 8px; }
+    nav h2 { font-size: 20px; }
+    nav ul { justify-content: center; gap: 8px 16px; }
+    nav a { font-size: 14px; }
+    section { scroll-margin-top: 115px; }
+    h3 { margin: 24px 16px; }
+    .entete { gap: 12px; padding: 0 14px; }
+    .entete h1 { font-size: clamp(38px, 10vw, 58px); }
+    .entete img { width: 34%; min-width: 0; max-width: 180px; border-radius: 20px; }
+    #description { margin: 18px 16px 0; max-width: none; text-align: left; font-size: 14px; }
+    #description br, #propos br { display: none; }
+    #bouton { display: block; margin: 24px auto 0; max-width: calc(100% - 32px); padding: 13px 22px; font-size: 18px; }
+    #version { margin: 6px 0 0; text-align: center; max-width: none; }
+    #hr { margin-top: 55px; }
+    #propos { margin: 20px 16px 30px; text-align: center; }
+    .galerie { flex-direction: column; gap: 16px; padding: 0 16px; }
+    .galerie img { width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; margin-bottom: 8px; }
+    .conteneur { gap: 18px; padding: 0 16px; }
+    .bloc { width: 100%; padding: 20px 16px; }
+    .bloc h2 { font-size: 22px; }
+    .numero { font-size: 48px; margin: 0 12px 0 0; }
+    #record { font-size: clamp(30px, 8vw, 46px); padding: 0 12px; }
+    #mon { padding: 0 12px; }
+    h4 { font-size: 17px; padding: 0 16px; margin-bottom: 35px; }
+    #dev { margin-bottom: 10px; }
+    #footer { text-align: center; }
+}
+
+@media (max-width: 380px) {
+    nav ul { gap: 6px 10px; }
+    nav a { font-size: 13px; }
+    .entete h1 { font-size: 36px; }
+    #bouton { font-size: 16px; padding: 12px 18px; }
+}
+
+/* Ajustement ciblé du haut de page (section Télécharger) */
+#telechargement > h3 { margin-left: 30px; }
+@media (max-width: 900px) {
+  #telechargement > h3 { text-align: left; margin: 24px 16px; }
+  #telechargement .entete { width: 100%; gap: clamp(12px, 3vw, 28px); padding: 0 18px; }
+  #telechargement .entete h1 { line-height: 1.05; overflow-wrap: anywhere; }
+  #telechargement .entete img { flex: 0 1 35%; width: 35%; max-width: 260px; }
+  #description { margin: 24px auto 0; padding: 0 20px; max-width: 650px; text-align: center; }
+  #bouton { margin: 24px auto 0; display: block; }
+  #version { margin: 8px auto 0; text-align: center; }
+  #hr { margin-top: 70px; }
+}
+@media (max-width: 600px) {
+  #telechargement > h3 { margin: 20px 12px; text-align: center; }
+  #telechargement .entete { flex-direction: column; gap: 10px; padding: 0 12px; }
+  #telechargement .entete h1 { font-size: clamp(42px, 12vw, 64px); text-align: center; line-height: 1.1; }
+  #telechargement .entete img { width: min(58%, 210px); max-width: 210px; }
+  #description { margin: 18px auto 0; padding: 0 18px; width: 100%; font-size: 14px; text-align: center; }
+  #bouton { margin: 22px auto 0; max-width: calc(100% - 32px); padding: 13px 20px; }
+  #version { margin: 8px auto 0; text-align: center; }
+  #hr { margin-top: 48px; }
+}
+@media (max-width: 380px) {
+  #telechargement .entete h1 { font-size: clamp(36px, 11vw, 46px); }
+  #telechargement .entete img { width: min(62%, 180px); }
+  #description { padding: 0 14px; }
+}
+
+/* Correction du hero sur PC uniquement : titre/logo et textes sans marges artificielles */
+@media (min-width: 901px) {
+  #telechargement { text-align: left; }
+  #telechargement > h3 { text-align: left; margin-left: 30px; }
+  #telechargement .entete {
+    width: min(1100px, calc(100% - 60px));
+    margin: 20px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(40px, 7vw, 100px);
+  }
+  #telechargement .entete h1 {
+    font-size: clamp(72px, 7.5vw, 100px);
+    line-height: 1.05;
+    white-space: nowrap;
+  }
+  #telechargement .entete img {
+    display: block; width: clamp(260px, 32vw, 380px);
+    max-width: 380px; min-width: 0; height: auto;
+  }
+  #description {
+    margin: 110px auto 0; padding: 0 24px;
+    max-width: 750px; text-align: center; font-size: 16px;
+  }
+  #description br { display: none; }
+  #bouton { display: block; margin: 26px auto 0; }
+  #version { margin: 8px auto 0; text-align: center; }
+  #hr { margin-top: 100px; }
+}
